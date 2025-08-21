@@ -69,8 +69,8 @@ The API supports the `?format` URL query parameter to specify the output format,
 
 
 (All Year)  
-[https://api-euromillions.nunofcguerreiro.com/results/year/2025](https://api-euromillions.nunofcguerreiro.com/results/year/2025)
-[https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml](https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml)  
+[https://api-euromillions.nunofcguerreiro.com/results/year/2025](https://api-euromillions.nunofcguerreiro.com/results/year/2025)  
+[https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml](https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml)   
 [https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=plaintext](https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=plaintext)
 
 
