@@ -1,2 +1,2 @@
 # Go-EuroMillions-API
-Go-EuroMillions-API
+EuroMillions-API
