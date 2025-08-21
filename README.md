@@ -93,3 +93,50 @@ To run the updater, use:
     ./go-euromillions-api-update -d /path/to/euromillions.db -s all -o update.log
     ```
 
+
+#### Examples:
+
+(Last)
+
+https://api-euromillions.nunofcguerreiro.com/results/latest
+
+https://api-euromillions.nunofcguerreiro.com/results/latest?format=xml
+
+https://api-euromillions.nunofcguerreiro.com/results/latest?format=plaintext
+
+
+(All)
+
+https://api-euromillions.nunofcguerreiro.com/results
+
+https://api-euromillions.nunofcguerreiro.com/results?format=xml
+
+https://api-euromillions.nunofcguerreiro.com/results?format=plaintext)
+
+
+(Date)
+
+https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19
+
+https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=xml
+
+https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=plaintext
+
+
+(All Year)
+
+https://api-euromillions.nunofcguerreiro.com/results/year/2025
+
+https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml
+
+https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=plaintext
+
+
+(All Year/Month)
+
+https://api-euromillions.nunofcguerreiro.com/results/month/2025-02
+
+https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=xml
+
+https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=plaintext
+
