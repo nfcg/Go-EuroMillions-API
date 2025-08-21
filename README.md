@@ -1,7 +1,9 @@
 # Go-EuroMillions-API
 
-EuroMillions-API is a lightweight HTTP server that serves EuroMillions drawing results from an SQLite database.
-The server can be configured with various options and supports multiple endpoints and output formats.
+EuroMillions API is a lightweight HTTP server written in Go, it serves EuroMillions drawing results from an SQLite database.  
+The server can be configured with various options and supports multiple endpoints and output formats. 
+
+----
 
 ### Building and Running
 
@@ -17,7 +19,9 @@ To run the server, use:
 ./go-euromillions-api [options]
 ```
 
-The server starts on port `8080` by default.
+The server starts on port `8080` by default.  
+
+<hr> 
 
 ### Command-Line Options
 
@@ -28,6 +32,8 @@ The server starts on port `8080` by default.
 | `--log-file` | `-l` | Path to a log file. Output is to the console by default. | (empty)|
 | `--version` | `-v` | Show the application version. | `false`|
 | `--help` | `-h` | Show the application help message. | `false`|
+
+<hr> 
 
 ### API Endpoints
 
@@ -40,103 +46,40 @@ The API supports the `?format` URL query parameter to specify the output format,
   * **GET `/results/year/{year}`**: Returns all results for a specific year. The year format is `YYYY`. Example: `/results/year/2023`.
   * **GET `/results/month/{month}`**: Returns all results for a specific month and year. The month format is `YYYY-MM`. Example: `/results/month/2024-03`.
 
-
-## Database Updater (`go-euromillions-api-update.go`)
-A command-line tool to scrape the latest EuroMillions results from various sources and update a local SQLite database.
-
-### Building and Running
-
-To build the executable, use:
-
-```bash
-go build go-euromillions-api-update.go
-```
-
-To run the updater, use:
-
-```bash
-./go-euromillions-api-update [options]
-```
-
-### Command-Line Options
-**Flags**:
-
-  * `--database, -d`: Path to the SQLite database file. (required)
-  * `--site, -s`: The site ID to update (`1`, `2`, `4`) or `'all'` to run all. (required)
-  * `--verbose, -v`: Enable verbose logging. (default: `false`)
-  * `--output, -o`: Path to a log file. Output is to the console by default.
-
-### Supported Sites
-
-  * `1`: https://www.euromilhoes.com/
-  * `2`: https://www.euro-millions.com/results
-  * `4`: https://www.euromillones.com/result-euromillions.asp
-  * `all`: Runs all.
-  
-### Usage Examples
-
-  * **Update from a single site (ID 1):**
-
-    ```bash
-    ./go-euromillions-api-update --database /path/to/euromillions.db --site 1
-    ```
-
-  * **Update from all supported sites:**
-
-    ```bash
-    ./go-euromillions-api-update --database /path/to/euromillions.db --site all --verbose
-    ```
-
-  * **Update with output to a log file:**
-
-    ```bash
-    ./go-euromillions-api-update -d /path/to/euromillions.db -s all -o update.log
-    ```
+<hr> 
 
 
-#### Examples:
+### Examples:
 
-(Last)
+(Last)  
+[https://api-euromillions.nunofcguerreiro.com/results/latest](https://api-euromillions.nunofcguerreiro.com/results/latest)  
+[https://api-euromillions.nunofcguerreiro.com/results/latest?format=xml](https://api-euromillions.nunofcguerreiro.com/results/latest?format=xml)  
+[https://api-euromillions.nunofcguerreiro.com/results/latest?format=plaintext](https://api-euromillions.nunofcguerreiro.com/results/latest?format=plaintext)  
 
-https://api-euromillions.nunofcguerreiro.com/results/latest
-
-https://api-euromillions.nunofcguerreiro.com/results/latest?format=xml
-
-https://api-euromillions.nunofcguerreiro.com/results/latest?format=plaintext
-
-
-(All)
-
-https://api-euromillions.nunofcguerreiro.com/results
-
-https://api-euromillions.nunofcguerreiro.com/results?format=xml
-
-https://api-euromillions.nunofcguerreiro.com/results?format=plaintext)
+(All)  
+[https://api-euromillions.nunofcguerreiro.com/results](https://api-euromillions.nunofcguerreiro.com/results)  
+[https://api-euromillions.nunofcguerreiro.com/results?format=xml](https://api-euromillions.nunofcguerreiro.com/results?format=xml)  
+[https://api-euromillions.nunofcguerreiro.com/results?format=plaintext](https://api-euromillions.nunofcguerreiro.com/results?format=plaintext)  
 
 
-(Date)
-
-https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19
-
-https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=xml
-
-https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=plaintext
+(Date)  
+[https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19](https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19)  
+[https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=xml](https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=xml)  
+[https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=plaintext](https://api-euromillions.nunofcguerreiro.com/results/date/2025-08-19?format=plaintext)
 
 
-(All Year)
-
-https://api-euromillions.nunofcguerreiro.com/results/year/2025
-
-https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml
-
-https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=plaintext
+(All Year)  
+[https://api-euromillions.nunofcguerreiro.com/results/year/2025](https://api-euromillions.nunofcguerreiro.com/results/year/2025)
+[https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml](https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=xml)  
+[https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=plaintext](https://api-euromillions.nunofcguerreiro.com/results/year/2025?format=plaintext)
 
 
-(All Year/Month)
+(All Year/Month)   
+[https://api-euromillions.nunofcguerreiro.com/results/month/2025-02](https://api-euromillions.nunofcguerreiro.com/results/month/2025-02)  
+[https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=xml](https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=xml)  
+[https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=plaintext](https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=plaintext)  
 
-https://api-euromillions.nunofcguerreiro.com/results/month/2025-02
 
-https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=xml
 
-https://api-euromillions.nunofcguerreiro.com/results/month/2025-02?format=plaintext
+
 
